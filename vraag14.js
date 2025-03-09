@@ -5,17 +5,17 @@ console.log("Print per land wanneer er minstens 7 personen wonen hoeveel persone
 console.log("Tel vrienden ook mee als personen.");
 console.log("Bijvoorbeeld:\n...\nUzbekistan, aantal personen: 10\nGreece, aantal personen: 7\n...");
 
-// I extend the Array prototype to add a method to all arrays.
+// I extended the Array prototype to add a method to all arrays.
 // Specifically, I'm defining a method that gives me the
-// frequency of elements in the array. This is basically a port
+// frequency of elements in an array. This is basically a port
 // of the Enum.frequencies/1 function from the Elixir standard
 // library to JS. (Yes, I'm an Elixir fanboy, as you might have noticed.)
 
 // This works by looping over all items in the array. For each item,
 // I check if there is already a corresponding key in the `freq` object.
 // If not, I set it to 1. Otherwise, I increment it by one. I return
-// the resulting object, which will contain the elements of the array
-// (deduplicated) as keys, and the amount of times they occured as values.
+// the resulting object, which will contain the (deduplicated) elements
+// of the array as keys, and the amount of times they occured as values.
 
 Array.prototype.frequencies = function() {
   const freq = {};

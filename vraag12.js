@@ -19,14 +19,14 @@ console.log('Bijvoorbeeld:\n...\nMabelle(86), hobbies: ["Basketball","Football",
 
 // I then check the equality by serializing both to JSON and checking
 // whether the strings are identical (because strings are not references
-// in JS). This is dirty; but it works.
+// in JS; arrays are). This is dirty; but it works.
 
 const equals = (a, b) =>
   JSON.stringify(a.toSorted()) == JSON.stringify(b.toSorted());
 
-// I first look over the list of people to keep only people where
-// the properyy `age` is bigger than 70. I then flatMap over this
-// list of people to construct a list of friends.
+// Then, first, I loop over the list of people to keep only people 
+// where the properyy `age` is bigger than 70. I then `flatMap` over 
+// this list of people to construct a list of friends.
 
 // This goes in a few steps:
 // - I loop over all people.
@@ -59,8 +59,12 @@ friends.forEach((f) => {
 // I'm sorry if the comments are getting shorter and shorter,
 // but for me things like arrays and strings are so obvious
 // I forget to point them out.
+
+// I'm leaving out explanations of how the functions (`filter`,
+// `reduce`, `flatMap` etc.) work, because I've already explained
+// that in previous assignments. I'm now only explaining my
+// thought process. Case at this point I've used `.filter` so many 
+// times it doesn't really need an explanation anymore LOL.
+
 // Also typing these comments is at this point taking longer
 // than actually writing the code.
-
-// Also, at this point I've used `.filter` so many times it
-// doesn't really need an explanation anymore LOL.

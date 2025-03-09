@@ -20,7 +20,7 @@ Array.prototype.frequencies = function () {
 
 // I'm performing the same steps as previously (question 14), but this time
 // I'm gonna actually need some of the intermediate variables later on, so
-// ket's make sure to save those.
+// let's make sure to save those.
 
 // Our array of friends & giant array of everyone.
 const friends = people.flatMap((p) => p.friends);
@@ -35,21 +35,21 @@ const countries = everyone.map((p) => p.location.country).frequencies();
 // We then filter that array to only keep countries with more
 // than 7 occurences, and then map over it again to get rid of the counts.
 // This leaves us with an array containing just country names.
-// (We can easily lookup the counts by calling `countries[name]`.)
+// (We can easily lookup the counts by calling `countries[name]`)
 
 const relevant = Object.entries(countries)
   .filter(([_, count]) => count > 7)
   .map(([name, _]) => name);
 
 // We then reduce over the array of people + friends (`everyone`)
-// to split the relevant people out over their respective countries,
+// to split the people out over their respective countries,
 // but only if the their current location is in a relevant country.
 
 // To do this, we reduce over everyone, and:
 
 // - if their country is not yet in the accumulator, insert an empty list.
-// - if the person's country is in the list of relevant country,
-//   add them to the correct list in the accumulator.
+// - if the person's country is in the list of relevant countries,
+//   add them to the correct key in the accumulator.
 
 // This gives us an object where the keys are country names, and the
 // values are people.
@@ -66,7 +66,7 @@ console.log("\n<Antwoord>");
 
 // Finally, we have all the required data to start printing to STDOUT :D
 // We loop over the relevant countries and lookup the amount of people
-// living there. We also look up who those people are.
+// living there. We also look up who those people are (the population).
 
 // As a last step, we `flatMap` over the population to extract their
 // hobbies and then take the frequencies of the final array, and yeet
