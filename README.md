@@ -1,6 +1,16 @@
-# Eindopdracht
+# 'Eindopdracht'
 
-Dit is mijn eindopdracht voor 6VWO informatica. Ik heb hieronder de originele uitleg geplakt:
+What you're looking at is my final assignment for 6VWO computer science. The assignment was querying a JSON file using Javascript (specifically NodeJS).
+
+This repo contains my experiments. At the time of writing, I've done basically all assignments, but improvements can still be made.
+
+To run everything in one batch:
+
+```shell
+./all.sh
+```
+
+Below, I've pasted the original assignment in Dutch:
 
 > Er zijn in totaal 15 vragen die je kunt beantwoorden.
 > Voor elke vraag kun je evenveel punten verdienen.
@@ -19,7 +29,8 @@ Dit is mijn eindopdracht voor 6VWO informatica. Ik heb hieronder de originele ui
 > In elke vraag wordt er gewerkt met het bestand people.json.
 > Dit bestand bevat een lijst met 300 verschillende personen.
 > Voor elke vraag zul je in deze lijst moeten zoeken om antwoord te geven op de vraag.
-> De structuur van personen uit de lijst is hier beneden toegelicht.
+
+And here's an example object with some additional explanation in Dutch, which was also included in the original assignment. Consider it a made-at-home version of a TypeScript type LOL.
 
 ```javascript
 const person = { // een person heeft de onderstaande eigenschappen
