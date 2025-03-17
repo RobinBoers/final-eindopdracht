@@ -33,13 +33,13 @@ const equals = (a, b) =>
 // - For each person, I loop over their friends.
 // - I only keep friends where the sorted list of hobbies
 //   is exactly identical to the sorted list of hobbies of
-//   the original person.
+//   the original person and the friend is older than 70.
 // - Finally, the list of lists is flattened (by the flatMap)
 //   into one semi-giant list of friends.
 
 const friends = people
   .filter((p) => p.age > 70)
-  .flatMap((p) => p.friends.filter((f) => equals(f.hobbies, p.hobbies)));
+  .flatMap((p) => p.friends.filter((f) => f.age > 70 && equals(f.hobbies, p.hobbies)));
 
 console.log("\n<Antwoord>");
 
