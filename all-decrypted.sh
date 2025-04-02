@@ -1,7 +1,6 @@
 #!/bin/bash
 
 run() {
-  bun "$1"
   sed -i 's|const people = require("./people.json");|const people = require("./decrypt.js");|' "$1"
   bun "$1"
   sed -i 's|const people = require("./decrypt.js");|const people = require("./people.json");|' "$1"
