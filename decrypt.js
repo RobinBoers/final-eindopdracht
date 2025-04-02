@@ -50,7 +50,10 @@ const lookup = {
     ":": "[",
     "++": ")",
     "+": "(",
-    "\"": "'"
+    "\"": "'",
+
+    // Special case to handle that randomly capitalized Q
+    "*pBkQ2B(-": "Pasquale"
 };
 
 const quotedCaps = [
@@ -68,7 +71,11 @@ const normalCaps = [
     ["\\*z", "Z"], ["\\*d", "D"], ["\\*h", "H"], ["\\*j", "J"], ["\\*n", "N"], ["\\*v", "V"],
     ["s\\*", "S"], ["c\\*", "C"], ["m\\*", "M"], ["w\\*", "W"], ["a\\*", "A"], ["e\\*", "E"],
     ["i\\*", "I"], ["g\\*", "G"], ["k\\*", "K"], ["o\\*", "O"], ["y\\*", "Y"], ["q\\*", "Q"],
-    ["u\\*", "U"], ["Q\\*", "Q"]
+    ["u\\*", "U"],
+
+    // Uhm...? Already capitalized??
+    // WHAT IS IT WITH THOSE STUPID Q's??
+    ["Q\\*", "Q"]
 ];
 
 function replaceAll(input, replacements) {
