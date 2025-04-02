@@ -92,4 +92,4 @@ function decrypt(path) {
     return JSON.parse(output);
 }
 
-exports.people = decrypt("encrypted-people.txt");
+module.exports = decrypt("encrypted-people.txt");
