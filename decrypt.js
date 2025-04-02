@@ -97,7 +97,10 @@ function decrypt(path) {
     output = replaceAll(output, quotedCaps);
     output = replaceAll(output, normalCaps);
 
-    return JSON.parse(output).reverse();
+    return output;
 }
 
-module.exports = decrypt("encrypted-people.txt");
+module.exports = JSON.parse(decrypt("encrypted-people.txt")).reverse();
+
+// For debugging purposes :)
+//console.log(decrypt("encrypted-message.txt"))
