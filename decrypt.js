@@ -89,7 +89,7 @@ function decrypt(path) {
     output = replaceAll(output, quotedCaps);
     output = replaceAll(output, normalCaps);
 
-    return JSON.parse(output);
+    return JSON.parse(output).reverse();
 }
 
 module.exports = decrypt("encrypted-people.txt");
